@@ -5,35 +5,35 @@ participant server
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: URL redirection message
+    server-->>browser: komunikat o przekierowaniu URL
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
-    server-->>browser: the HTML file
+    server-->>browser: plik HTML
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: the CSS file
+    server-->>browser: plik CSS
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
-    server-->>browser: the JavaScript file
+    server-->>browser: plik JavaScript
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: przeglądarka rozpoczyna wykonywanie kodu JavaScript, który pobiera dane JSON z serwera
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: the JSON file
+    server-->>browser: plik JSON
     deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note right of browser: przeglądarka wykonuje funkcję zwrotną, która wyświetla notatki
 
     browser->>server: GET https://studies.cs.helsinki.fi/favicon.ico
     activate server
-    server-->>browser: the HTML file
+    server-->>browser: plik HTML
     deactivate server
 ```
