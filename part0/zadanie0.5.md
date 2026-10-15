@@ -29,6 +29,6 @@ participant serwer
 
     przegladarka->>serwer: GET https://studies.cs.helsinki.fi/favicon.ico
     activate serwer
-    server-->>przegladarka: plik HTML
+    serwer-->>przegladarka: plik HTML
     deactivate serwer
 ```
