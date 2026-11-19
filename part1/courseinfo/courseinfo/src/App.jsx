@@ -1,7 +1,6 @@
 const Header = ({ name }) => {
   return <h1>{name}</h1>;
 };
-
 const Content = ({ parts }) => {
   return (
     <div>
@@ -11,7 +10,6 @@ const Content = ({ parts }) => {
     </div>
   );
 };
-
 const Part = ({ part }) => {
   return (
     <p>
